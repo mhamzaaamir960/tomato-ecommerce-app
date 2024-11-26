@@ -6,21 +6,41 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      {/* Logo */}
-      <a href="/">
-        <img src={assets.logo} alt="Tomato logo" className={styles.navLogo} />
-      </a>
+    <header style={{width: "100%", display: "flex", justifyContent: "center"}}>
+      <nav className={styles.navbar}>
 
-      {/* Navbar Links */}
-      <ul className={styles.navbarLinks}>
-        {navLinks.map((link) => (
-          <Link to={link.link} key={link.name}>
-            <li >{link.name}</li>
+        <a href="/">
+        <img src={assets.logo} alt="Tomato logo" className={styles.navLogo} />
+        </a>
+
+        {/* Navbar Links */}
+        <ul className={styles.navbarLinks}>
+          {navLinks.map((link) => (
+            <Link
+              style={{
+                color: "black",
+                textDecoration: "none",
+              }}
+              to={link.link}
+              key={link.name}
+            >
+              <li>{link.name}</li>
+            </Link>
+          ))}
+        </ul>
+
+        {/* Login Button */}
+        <div className={styles.container}>
+          <Link to={"/"}>
+          <img src={assets.search_icon} alt="search icon" />
+           </Link>
+        <Link to={"/cart"}> 
+          <img src={assets.basket_icon} alt="basket icon" />
           </Link>
-        ))}
-      </ul>
-    </nav>
+          <button className={styles.btn}>Sign In</button>
+        </div>
+      </nav>
+    </header>
   );
 }
 
