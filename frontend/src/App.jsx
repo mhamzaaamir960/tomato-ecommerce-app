@@ -1,11 +1,12 @@
-import { Herosection } from "./components";
+import { ExploreMenu, Herosection } from "./components";
 import "./App.css";
 
 function App() {
   return (
-    <main>
+    <>
       <Herosection />
-    </main>
+      <ExploreMenu />
+    </>
   );
 }
 
