@@ -4,7 +4,6 @@
   height: 870px;
   background: url("../../assets/frontend_assets/header_img.png") no-repeat
     bottom center/contain;
-  /* border: 1px solid black; */
   display: flex;
   align-items: end;
   justify-content: center;
