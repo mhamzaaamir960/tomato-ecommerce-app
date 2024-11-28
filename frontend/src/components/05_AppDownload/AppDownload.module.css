@@ -1,0 +1,38 @@
+.container {
+  max-width: 1680px;
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  background-color: inherit;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.heading2 {
+  max-width: 800px;
+  width: fit-content;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(46, 46, 46);
+  user-select: none;
+}
+
+
+.appIcons {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.appIcon {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+}

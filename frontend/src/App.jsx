@@ -1,4 +1,4 @@
-import { ExploreMenu, Herosection, MenuCards } from "./components";
+import { AppDownload, ExploreMenu, Herosection, MenuCards } from "./components";
 import "./App.css";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
       <Herosection />
       <ExploreMenu />
       <MenuCards />
+      <AppDownload />
     </>
   );
 }
