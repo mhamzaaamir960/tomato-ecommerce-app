@@ -4,8 +4,7 @@ import styles from "./ExploreMenu.module.css";
 import { assets } from "../../assets/frontend_assets/assets";
 import { menu_list } from "../../assets/frontend_assets/assets";
 
-
-function ExploreMenu() {
+function ExploreMenu({ category, setCategory }) {
   return (
     <MaxWidth>
       <div className={styles.container}>
@@ -18,13 +17,24 @@ function ExploreMenu() {
         <div className={styles.menuList}>
           {menu_list.map((item, index) => (
             <div key={index} className={styles.menuItem}>
-              <img src={item.menu_image} alt="menu" className={styles.menuImg} />
+              <img
+                src={item.menu_image}
+                alt="menu"
+                className={`${styles.menuImg} ${
+                  category === item.menu_name && styles.active
+                }`}
+                onClick={() =>
+                  setCategory((prev) =>
+                    prev === item.menu_name ? "All" : item.menu_name
+                  )
+                }
+              />
               <span className={styles.menuName}>{item.menu_name}</span>
             </div>
           ))}
         </div>
 
-        <div className={styles.horizantalLine} />
+        <hr className={styles.horizantalLine} />
       </div>
     </MaxWidth>
   );
