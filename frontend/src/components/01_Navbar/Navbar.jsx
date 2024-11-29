@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 import { navLinks } from "./NavLinks";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({setShowLogin}) {
   return (
     <header
       style={{ width: "100%", display: "flex", justifyContent: "center" }}
@@ -31,7 +31,7 @@ function Navbar() {
           <Link to={"/cart"}>
             <img src={assets.basket_icon} alt="basket icon" />
           </Link>
-          <button className={styles.btn}>Sign In</button>
+          <button onClick={() => setShowLogin(true)} className={styles.btn}>Sign Up</button>
         </div>
       </nav>
     </header>

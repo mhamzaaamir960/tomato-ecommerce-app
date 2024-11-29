@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   /* border: 1px solid black; */
-  z-index: 50;
+  z-index: 1;
 }
 
 a {
@@ -89,13 +89,16 @@ button {
   height: auto;
   padding: 10px 30px;
   border-radius: 20px;
-  border: #ff6347 1px solid;
+  border: tomato 1px solid;
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #ff6347;
+  background-color: tomato;
+  opacity: 0.9;
   color: white;
 }

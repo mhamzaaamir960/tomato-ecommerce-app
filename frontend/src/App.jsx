@@ -1,15 +1,23 @@
-import { AppDownload, ExploreMenu, Herosection, MenuCards } from "./components";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home/Home";
+import { Footer, Navbar } from "./components";
 import { useState } from "react";
+import LoginPopUp from "./components/LoginPopUp/LoginPopUp";
 
 function App() {
-  const [category, setCategory] = useState("All");
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <>
-      <Herosection />
-      <ExploreMenu category={category} setCategory={setCategory} />
-      <MenuCards category={category} />
-      <AppDownload />
+      {showLogin && (
+        <LoginPopUp showLogin={showLogin} setShowLogin={setShowLogin} />
+      )}
+
+      <Navbar setShowLogin={setShowLogin} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
