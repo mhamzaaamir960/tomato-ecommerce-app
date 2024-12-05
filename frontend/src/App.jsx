@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import { Footer, Navbar } from "./components";
 import { useState } from "react";
 import LoginPopUp from "./components/LoginPopUp/LoginPopUp";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -16,6 +17,7 @@ function App() {
       <Navbar setShowLogin={setShowLogin} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route  path="/cart" element={<Cart />}/>
       </Routes>
       <Footer />
     </>
